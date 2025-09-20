@@ -19,9 +19,9 @@ import kotlin.random.nextInt
 fun main() {
 
 // Scenario 1: Online Shopping Cart
-    val p1 = PhysicalProduct(productName = "Clock", quantity = 1, price = 1000.0)
+    val p1 = PhysicalProduct("Clock",  1,  1000.0)
     val p2 = PhysicalProduct("Mobile", 5, 8000.0)
-    val p3= PhysicalProduct("Laptop", 1, 90000.0)
+    val p3=  PhysicalProduct("Laptop", 1, 90000.0)
 
     val d1 = DigitalProduct("Netflix", 1, 52.0)
     val d2 = DigitalProduct("Facebook", 1, 250.0)
@@ -71,7 +71,7 @@ fun main() {
     // Calculate salary
     allEmployees.forEach {
         val workedDays = Random.nextInt(range = 1..30)
-        it.salary(workedDays)
+       it.salary(workedDays)
         println("${it.employeeType()}: ${it.name} worked $workedDays days, salary: ${it.monthlySalary}")
     }
 
